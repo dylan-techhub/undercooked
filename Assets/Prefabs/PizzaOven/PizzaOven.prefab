@@ -176,6 +176,8 @@ MonoBehaviour:
   isEnabled: 1
   useAlternateTransformForPosition: 0
   altTransform: {fileID: 0}
+  manualOffset: 0
+  manualOffsetAmount: 1
 --- !u!1 &3068603270743765303
 GameObject:
   m_ObjectHideFlags: 0
