@@ -61,7 +61,7 @@ public class DrinkSpillStuff : MonoBehaviour {
 
         animator.SetTrigger("clean");
         yield return new WaitForSeconds(1);
-        stage = 0;
+        stage = 3;
         yield return new WaitForSeconds(5);
         gameObject.SetActive(false);
     }

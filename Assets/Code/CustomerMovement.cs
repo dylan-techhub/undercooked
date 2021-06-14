@@ -9,14 +9,18 @@ public class CustomerMovement : MonoBehaviour
 
     //private bool wasAtCounter = false;
 
+    //public CustomerManager manager;
+
     // Editor variables
     public Rigidbody2D rigid;
 
-    // Walk into the 
+    /*
+    // Walk into the scene
     void Start()
     {
         WalkIn(); //temporary start on play
     }
+    */
 
    // Walk to the counter
     public void WalkIn() 
@@ -30,6 +34,7 @@ public class CustomerMovement : MonoBehaviour
     {
         Debug.Log("Customer walk out");
         moveForce = -1f;
+       // manager.NextCustomerEnter();
     }
 
     // Physics update loop, used for adding force to the rigidbody

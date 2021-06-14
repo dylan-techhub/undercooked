@@ -17,6 +17,62 @@ public class PlayerInventory : MonoBehaviour
     public UnityEvent handsAreFull = new UnityEvent();
     public UnityEvent trashDiscarded = new UnityEvent();
 
+    public void RemoveAll() // removes all
+    {
+        drinks = 0;
+        burgers = 0;
+        deluxeBurger = 0;
+        hasPizza = false;
+    }
+
+    public int ConvertToint()
+    { // poggers code
+        if (hasPizza)
+        {
+            return 1;
+        }
+        else
+        {
+            return 0;
+        }
+    }
+
+    public int CountItems()
+    {
+        return (burgers + drinks + deluxeBurger + ConvertToint());
+    }
+
+    public bool RemoveTrash()
+    {
+
+        if (hasTrash)
+        {
+            hasTrash = false;
+            return true;
+        }
+        else
+        {
+            Debug.Log("No Trash to remove");
+            return false;
+        }
+    }
+
+    public bool AddTrash()
+    {
+        if (hasPizza || burgers > 0 || drinks > 0 || deluxeBurger > 0 || hasMop)
+        {
+            Debug.Log("Can't pick up trash while my hands are full");
+            return false;
+        }
+        else
+        {
+            Debug.Log("Picked Up Trash");
+            hasTrash = true;
+            return true;
+        }
+    }
+
+
     // Garbage Chute
     public void DumpAllInventory(){
         hasPizza = false;

@@ -45,7 +45,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.20465791, y: 0.3817528}
+  m_Offset: {x: -0.21067537, y: 0.09893079}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -56,7 +56,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2545908, y: 0.19524914}
+  m_Size: {x: 0.26662573, y: 0.21931925}
   m_EdgeRadius: 0
 --- !u!114 &610958628
 MonoBehaviour:
@@ -103,7 +103,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1641090068
 Transform:
   m_ObjectHideFlags: 0
@@ -175,6 +175,7 @@ GameObject:
   - component: {fileID: 364740502051363464}
   - component: {fileID: 3450695805430948813}
   - component: {fileID: 61576455}
+  - component: {fileID: 1494302541}
   m_Layer: 0
   m_Name: drinkSpill
   m_TagString: Untagged
@@ -384,3 +385,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1494302541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 364740502051363467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bb2ea6dbaa30ef44852aa0690d91465, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  art: {fileID: 0}
+  isEnabled: 1
+  useAlternateTransformForPosition: 0
+  altTransform: {fileID: 0}
+  manualOffset: 0
+  manualOffsetAmount: 1

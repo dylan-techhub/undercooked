@@ -9,25 +9,42 @@ public class chuteScript : MonoBehaviour
     public Sprite closed;
     public Sprite open;
     public trashScript trashScript;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private bool isPlayerNearby = false;
+    public PlayerInventory inv;
 
-    // Update is called once per frame
+    // Start is called before the first frame update
     void Update()
     {
-        
+        if (isPlayerNearby)
+        {
+            if (Input.GetButtonDown("Jump"))
+            {
+                if (inv.hasTrash == true)
+                {
+                    UseChute();
+                }
+            }
+        }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        // Check if person is holding bag
-        // if(holdingBag) {
+        isPlayerNearby = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        isPlayerNearby = false;
+    }
+
+    public void UseChute()
+    {
+        inv.RemoveTrash();
         sprite.sprite = closed;
-        trashScript.setIndexZero();
-        trashScript.sprite.sprite = trashScript.sprite1;
-        trashScript.index = 0;
-        // }
+    }
+
+    public void openChute()
+    {
+        sprite.sprite = open;
     }
 }

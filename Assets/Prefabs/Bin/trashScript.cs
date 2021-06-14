@@ -4,42 +4,62 @@ using UnityEngine;
 
 public class trashScript : MonoBehaviour
 {
-    public SpriteRenderer sprite;
-    public SpriteRenderer otherSprite;
-    public Sprite sprite1;
-    public Sprite sprite2;
-    public Sprite sprite3;
-    public Sprite open;
+    // Editor Varaibles
+    public SpriteRenderer trashBinSprite;
     public BoxCollider2D collider;
-    public int index = 0;
-    void Start()
+    public PlayerInventory inv;
+    public chuteScript chute;
+
+    public Sprite emptyTrash;
+    public Sprite someTrash;
+    public int trashMax = 5;
+    public int trashCurrent = 0;
+
+    // Private Variables
+    private bool isPlayerNearby = false;
+
+    void Update()
     {
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (index == 0)
+        if (isPlayerNearby && Input.GetButtonDown("Jump"))
         {
-            index += 1;
-            sprite.sprite = sprite2;
-        }
-        if (index >= 1 & index <= 5)
-        {
-            index += 1;
-        }
-        if (index == 6)
-        {
-            sprite.sprite = sprite3;
-            giveGarbageBag();
-            otherSprite.sprite = open;
+            DumpInventoryInTrash();
         }
     }
 
-    public void setIndexZero()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        index = 0;
+        isPlayerNearby = true;
     }
-    private void giveGarbageBag()
+
+    private void OnCollisionExit2D(Collision2D collision)
     {
-        //Animation To Give Garbage Bag To Player
+        isPlayerNearby = false;
     }
+
+    private void DumpInventoryInTrash()
+    {
+        if (inv.CountItems() > 0)
+        {
+            Debug.Log("Added " + inv.CountItems() + " items to trashbin");
+            trashBinSprite.sprite = someTrash;
+            trashCurrent += inv.CountItems();
+            inv.RemoveAll();
+        }
+
+        // Force the player to remove the trash if the trashbin is full.
+        if (trashCurrent >= trashMax)
+        {
+            RemoveTrash();
+            chute.openChute();
+            Debug.Log("Trash is at max, automatically giving player trash");
+        }
+    }
+
+    private void RemoveTrash()
+    {
+        trashCurrent = 0;
+        inv.AddTrash();
+        trashBinSprite.sprite = emptyTrash;
+    }
+
 }
