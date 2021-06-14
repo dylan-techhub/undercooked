@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 5644812880235632709}
   - component: {fileID: 5644812880235632708}
   - component: {fileID: 5644812880235632710}
-  - component: {fileID: 5644812880235632711}
   - component: {fileID: 1554846039}
   - component: {fileID: 1554846042}
+  - component: {fileID: 2065642562}
   m_Layer: 0
   m_Name: trashBin
   m_TagString: Untagged
@@ -98,10 +98,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00872606, y: -0.1647946}
+  m_Offset: {x: -0.00872606, y: 0.07844433}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0}
     oldSize: {x: 0.28, y: 0.52}
     newSize: {x: 0.28, y: 0.52}
     adaptiveTilingThreshold: 0.5
@@ -109,29 +109,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.26254785, y: 0.16539712}
+  m_Size: {x: 0.26254785, y: 0.1259529}
   m_EdgeRadius: 0
---- !u!114 &5644812880235632711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5644812880235632763}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28101170b976ae644b7f11a620641570, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 5644812880235632708}
-  otherSprite: {fileID: 0}
-  sprite1: {fileID: -28430437290724996, guid: b2c1ccd574dadf947bcbdacaf4849f74, type: 3}
-  sprite2: {fileID: 5995234487148969292, guid: b2c1ccd574dadf947bcbdacaf4849f74, type: 3}
-  sprite3: {fileID: -7674764526461667423, guid: b2c1ccd574dadf947bcbdacaf4849f74,
-    type: 3}
-  open: {fileID: 21300000, guid: 18762241a5b32494e8492446e43b1f1b, type: 3}
-  collider: {fileID: 5644812880235632710}
-  index: 0
 --- !u!58 &1554846039
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -145,7 +124,7 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01246577, y: -0.16828795}
+  m_Offset: {x: -0.01246577, y: 0.08}
   serializedVersion: 2
   m_Radius: 0.17398608
 --- !u!114 &1554846042
@@ -164,3 +143,27 @@ MonoBehaviour:
   isEnabled: 1
   useAlternateTransformForPosition: 0
   altTransform: {fileID: 0}
+  manualOffset: 0
+  manualOffsetAmount: 1
+--- !u!114 &2065642562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5644812880235632763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28101170b976ae644b7f11a620641570, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trashBinSprite: {fileID: 5644812880235632708}
+  collider: {fileID: 5644812880235632710}
+  inv: {fileID: 0}
+  chute: {fileID: 0}
+  emptyTrash: {fileID: -28430437290724996, guid: b2c1ccd574dadf947bcbdacaf4849f74,
+    type: 3}
+  someTrash: {fileID: 5995234487148969292, guid: b2c1ccd574dadf947bcbdacaf4849f74,
+    type: 3}
+  trashMax: 5
+  trashCurrent: 0

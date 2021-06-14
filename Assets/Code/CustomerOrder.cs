@@ -34,7 +34,8 @@ public class CustomerOrder : MonoBehaviour
 
     public PlayerInventory inventory;
 
-    public CustomerMovement movement;
+    //public CustomerMovement movement;
+    public CustomerManager man;
 
 
     // Update is called once per frame
@@ -106,7 +107,8 @@ public class CustomerOrder : MonoBehaviour
             dingBellCount = 2;
 
             // Make the customer walk away with the CustomerMovement script
-            movement.WalkOut();
+            //movement.WalkOut();
+            man.OrderComplete();
         }
 
         // Check if the bell needs to be dinged

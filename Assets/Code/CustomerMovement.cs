@@ -9,7 +9,7 @@ public class CustomerMovement : MonoBehaviour
 
     //private bool wasAtCounter = false;
 
-    public CustomerManager manager;
+    //public CustomerManager manager;
 
     // Editor variables
     public Rigidbody2D rigid;
@@ -34,7 +34,7 @@ public class CustomerMovement : MonoBehaviour
     {
         Debug.Log("Customer walk out");
         moveForce = -1f;
-        manager.NextCustomerEnter();
+       // manager.NextCustomerEnter();
     }
 
     // Physics update loop, used for adding force to the rigidbody
