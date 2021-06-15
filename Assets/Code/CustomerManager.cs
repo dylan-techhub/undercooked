@@ -42,18 +42,20 @@ public class CustomerManager : MonoBehaviour
     // how long it took, etc
     public void OrderComplete(){
         NextCustomerExit();
+        NextCustomerEnter();
     }
 
     // Make the next customer enter
     public void NextCustomerEnter()
-    { 
+    {
         // Activate the customer
+        customerIndex++;
         customers[customerIndex].SetActive(true);
         movement[customerIndex].WalkIn();
         // UI ref
         CustomerOrder order = customers[customerIndex].GetComponent<CustomerOrder>();
         invUI.inv = order;
-        customerIndex++;
+        //customerIndex++;
         if(customerIndex >= customers.Length){
             customerIndex = 0;
         }
