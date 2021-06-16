@@ -25,6 +25,8 @@ public class CustomerManager : MonoBehaviour
 
     public CustomerOrderInvUI invUI;
 
+    public ScoringUI scoreUI;
+
     public int playerScore;
 
     // Private Variables
@@ -54,8 +56,12 @@ public class CustomerManager : MonoBehaviour
         movement[customerIndex].WalkIn();
         // UI ref
         CustomerOrder order = customers[customerIndex].GetComponent<CustomerOrder>();
-        invUI.inv = order;
-        //customerIndex++;
+
+        invUI.inv = order; // For the inventory UI
+
+        scoreUI.currentCustomer = customerIndex; // For the score UI
+        scoreUI.inv = order; // For the score UI
+
         if(customerIndex >= customers.Length){
             customerIndex = 0;
         }

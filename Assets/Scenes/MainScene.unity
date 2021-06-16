@@ -260,6 +260,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1401219570}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &180011570 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3183113704365302152, guid: db3b89824d3f85e4084af3719308bafb,
+    type: 3}
+  m_PrefabInstance: {fileID: 848398788}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ece61e3b8faa4fb42b2c40fb1dcf30e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &249783625 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7070776287100682106, guid: f026443a4dc95c94c8db674ba3113899,
@@ -3315,6 +3327,11 @@ PrefabInstance:
       propertyPath: customers.Array.data[5]
       value: 
       objectReference: {fileID: 497432054}
+    - target: {fileID: 1196944581433090583, guid: f026443a4dc95c94c8db674ba3113899,
+        type: 3}
+      propertyPath: scoreUI
+      value: 
+      objectReference: {fileID: 180011570}
     - target: {fileID: 1756965632974571790, guid: f026443a4dc95c94c8db674ba3113899,
         type: 3}
       propertyPath: inventory
