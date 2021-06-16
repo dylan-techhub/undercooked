@@ -52,6 +52,10 @@ public class CustomerManager : MonoBehaviour
     {
         // Activate the customer
         customerIndex++;
+        if (customerIndex >= customers.Length) {
+            customerIndex = 0;
+        }
+
         customers[customerIndex].SetActive(true);
         movement[customerIndex].WalkIn();
         // UI ref
@@ -62,9 +66,7 @@ public class CustomerManager : MonoBehaviour
         scoreUI.currentCustomer = customerIndex; // For the score UI
         scoreUI.inv = order; // For the score UI
 
-        if(customerIndex >= customers.Length){
-            customerIndex = 0;
-        }
+
     }
 
     public void NextCustomerExit() {
