@@ -1,5 +1,62 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &54032247
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 54032249}
+  - component: {fileID: 54032248}
+  m_Layer: 0
+  m_Name: backWall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &54032249
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54032247}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.23, y: -2.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7096355354180113243}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &54032248
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54032247}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 4.1998024, y: -0.1370244}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 9.399605, y: 0.7259512}
+  m_EdgeRadius: 0
 --- !u!1 &212960218
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,7 +67,7 @@ GameObject:
   m_Component:
   - component: {fileID: 212960219}
   - component: {fileID: 212960220}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Background-Grass (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +148,7 @@ GameObject:
   m_Component:
   - component: {fileID: 262956902}
   - component: {fileID: 262956903}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Floor (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,7 +229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1015345515}
   - component: {fileID: 1015345516}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Floor (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -253,7 +310,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1247180089}
   - component: {fileID: 1247180090}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Floor (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -335,7 +392,7 @@ GameObject:
   - component: {fileID: 1723047419}
   - component: {fileID: 1723047421}
   - component: {fileID: 1723047420}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Back Wall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -442,7 +499,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1789593636}
   - component: {fileID: 1789593637}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Background-Grass (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -523,7 +580,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3786037934836488967}
   - component: {fileID: 4339674196815548772}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Background-Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -604,7 +661,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1886278692218040687}
   - component: {fileID: 1886278692218040672}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Decorations
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -685,7 +742,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1886278692435976515}
   - component: {fileID: 1886278692435976516}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -768,7 +825,7 @@ GameObject:
   - component: {fileID: 1886278692446104837}
   - component: {fileID: 1886278692446104835}
   - component: {fileID: 918216521}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Middle Counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -894,7 +951,7 @@ GameObject:
   - component: {fileID: 1886278692546212250}
   - component: {fileID: 1886278692546212251}
   - component: {fileID: 1886278692546212249}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Side Wall Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1002,7 +1059,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1886278692744365348}
   - component: {fileID: 1886278692744365347}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Side of front Counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1059,7 +1116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1886278693106397819}
   - component: {fileID: 1886278693106397820}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: 'Beta '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1142,7 +1199,7 @@ GameObject:
   - component: {fileID: 1886278693274283266}
   - component: {fileID: 1886278693274283264}
   - component: {fileID: 8149142823820533528}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Front Counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1269,7 +1326,7 @@ GameObject:
   - component: {fileID: 1886278693721233878}
   - component: {fileID: 1886278693721233879}
   - component: {fileID: 1886278693721233877}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Back Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1377,7 +1434,7 @@ GameObject:
   - component: {fileID: 1886278693991938618}
   - component: {fileID: 1886278693991938619}
   - component: {fileID: 1886278693991938617}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Side Wall Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1487,7 +1544,7 @@ GameObject:
   - component: {fileID: 1886278694024822421}
   - component: {fileID: 1886278694024822419}
   - component: {fileID: 1417831427}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Back Counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1612,7 +1669,7 @@ GameObject:
   m_Component:
   - component: {fileID: 271240606680651592}
   - component: {fileID: 7097115847741689958}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Background-Grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1692,7 +1749,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1437818809553668000}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Backdrops
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1730,7 +1787,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7096355354180113243}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Backgrounds (2)
   m_TagString: Counter
   m_Icon: {fileID: 0}
@@ -1755,6 +1812,7 @@ Transform:
   - {fileID: 1886278692218040687}
   - {fileID: 1437818809553668000}
   - {fileID: 864681507248436550}
+  - {fileID: 54032249}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1767,7 +1825,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 864681507248436550}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
