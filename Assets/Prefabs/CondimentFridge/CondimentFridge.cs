@@ -55,14 +55,12 @@ public class CondimentFridge : MonoBehaviour
                         //CloseFridge();
                         GiveCondiment();
                         // Close Fridge
-                        Debug.Log("switched Frame");
                     }
                 }
                 else
                 {
                    // OpenFridge();
                     // Open Fridge
-                    Debug.Log("switched Frame");
                 }
             }
         }
@@ -94,7 +92,9 @@ public class CondimentFridge : MonoBehaviour
 
             if(inv.UpgradeBurger()){
                 Debug.Log("Burger is now deluxe");
-            }else{
+                removeCondimentEvent.Invoke();
+            }
+            else{
                 Debug.Log("No Burger in inventory");
             }
 
@@ -102,14 +102,12 @@ public class CondimentFridge : MonoBehaviour
             // player can get condiment 
             // remove a condiment from the numberOfCondiments
             numberOfCondiments = numberOfCondiments - 1;
-            Debug.Log("Gave Condiment");
             // if fridge is empty change art,
             if (numberOfCondiments < 1)
             {
                 //FridgeSprite.sprite = EmptyFridge;**
             }
             
-            removeCondimentEvent.Invoke();
 
         }
     }
