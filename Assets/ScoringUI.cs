@@ -10,6 +10,9 @@ public class ScoringUI : MonoBehaviour
     public Text avgTimeText;
     public Text currentTimeText;
 
+    // Customer manager
+    public CustomerOrder inv;
+
     // variables to store
     public int currentCustomer = 0;
     public int avgTime = 0; // how do we keep this accurate? Tricky problem here. 
@@ -25,6 +28,14 @@ public class ScoringUI : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        customerNumText.text = "" + currentCustomer;
+        avgTimeText.text = "" + avgTime;
+        //currentTimeText.text = "" + 0;
+        currentTimeText.text = "" + (int)inv.timeSinceOrderTaken;
+    }
+
     // Call every frame in Update method
     public void UpdateOrderTimer(int currentTimer){
         currentTimeText.text = "" + currentTimer;
@@ -36,4 +47,5 @@ public class ScoringUI : MonoBehaviour
         // add to average (a little tricky, normalize over the proportion it will contribute
 
     }
+
 }
