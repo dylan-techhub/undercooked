@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class PlayerInventory : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class PlayerInventory : MonoBehaviour
     public bool hasTrash = false;
     public bool hasMop = false;
     public bool hasRestockBox = false;
+    public Text text;
 
     public UnityEvent handsAreFull = new UnityEvent();
     public UnityEvent trashDiscarded = new UnityEvent();
@@ -36,6 +38,10 @@ public class PlayerInventory : MonoBehaviour
             return 0;
         }
     }
+    public void SetTextNil()
+    {
+        text.text = "";
+    }
 
     public int CountItems()
     {
@@ -48,6 +54,7 @@ public class PlayerInventory : MonoBehaviour
         if (hasTrash)
         {
             hasTrash = false;
+            SetTextNil();
             return true;
         }
         else
@@ -74,7 +81,8 @@ public class PlayerInventory : MonoBehaviour
 
 
     // Garbage Chute
-    public void DumpAllInventory(){
+    public void DumpAllInventory()
+    {
         hasPizza = false;
         burgers = 0;
         drinks = 0;
@@ -85,7 +93,8 @@ public class PlayerInventory : MonoBehaviour
     }
 
     // trash Can
-    public void ThrowInTrash(){
+    public void ThrowInTrash()
+    {
         hasPizza = false;
         burgers = 0;
         drinks = 0;
@@ -94,21 +103,29 @@ public class PlayerInventory : MonoBehaviour
         hasRestockBox = false;
     }
 
-    public bool PickUpTrash(){
-        if(hasFullSlot()){
+    public bool PickUpTrash()
+    {
+        if (hasFullSlot())
+        {
             hasTrash = true;
             return true;
-        }else{
+        }
+        else
+        {
             return false;
         }
     }
 
     // For Mop/Restock/pizza/trash
-    public bool hasFullSlot(){
-        if(hasPizza || burgers > 0 || drinks > 0 || deluxeBurger > 0 || hasTrash || hasRestockBox || hasMop){
+    public bool hasFullSlot()
+    {
+        if (hasPizza || burgers > 0 || drinks > 0 || deluxeBurger > 0 || hasTrash || hasRestockBox || hasMop)
+        {
             handsAreFull.Invoke();
             return false;
-        }else{
+        }
+        else
+        {
             return true;
         }
 
@@ -117,24 +134,30 @@ public class PlayerInventory : MonoBehaviour
     }
 
     // If we have room for a single unit item, which we cna hold 3 of
-    public bool hasOneSpot() {
+    public bool hasOneSpot()
+    {
         int singleItemCount = burgers + drinks + deluxeBurger;
 
-        if (hasPizza || singleItemCount > 2 || hasTrash || hasRestockBox || hasMop){
+        if (hasPizza || singleItemCount > 2 || hasTrash || hasRestockBox || hasMop)
+        {
             handsAreFull.Invoke();
             return false;
-        }else{
+        }
+        else
+        {
             return true;
         }
     }
 
-    public void AddMop() {
+    public void AddMop()
+    {
 
         if (hasFullSlot())
         {
             Debug.Log("Picked Up Mop");
             hasMop = true;
-        } else
+        }
+        else
         {
             Debug.Log("Can't pick up mop while my hands are full");
         }
@@ -144,14 +167,19 @@ public class PlayerInventory : MonoBehaviour
     public void RemoveMop()
     {
         hasMop = false;
+        SetTextNil();
     }
 
-    public bool UpgradeBurger() {
-        if (burgers > 0) {
+    public bool UpgradeBurger()
+    {
+        if (burgers > 0)
+        {
             burgers--;
             deluxeBurger++;
             return true;
-        } else {
+        }
+        else
+        {
             // no burgers found
             return false;
         }
@@ -164,7 +192,8 @@ public class PlayerInventory : MonoBehaviour
         {
             hasPizza = true;
             return true;
-        } else
+        }
+        else
         {
             Debug.Log("Can't pick up a pizza with a burger in your hand");
             return false;
@@ -182,6 +211,7 @@ public class PlayerInventory : MonoBehaviour
         if (hasPizza)
         {
             hasPizza = false;
+            SetTextNil();
             return true;
         }
         else
@@ -216,7 +246,7 @@ public class PlayerInventory : MonoBehaviour
     {
         // first enter your pin number
         // Statement within the method
-        if(hasOneSpot())
+        if (hasOneSpot())
         {
 
             Debug.Log("Added a burger");
@@ -228,8 +258,8 @@ public class PlayerInventory : MonoBehaviour
             // We are full and can't take the burger. 
             return false;
         }
-        
-       
+
+
         // Update the UI
         // Play sound effect
         // update the art
@@ -253,9 +283,10 @@ public class PlayerInventory : MonoBehaviour
 
     public bool RemoveBurger()
     {
-        if(burgers > 0)
+        if (burgers > 0)
         {
             burgers--;
+            SetTextNil();
             Debug.Log("Burger Removed");
             return true;
         }
@@ -281,7 +312,7 @@ public class PlayerInventory : MonoBehaviour
             return false;
         }
 
-        
+
         // Update the UI
         // Play sound effect
         // update the art
@@ -293,12 +324,17 @@ public class PlayerInventory : MonoBehaviour
         return (deluxeBurger > 0);
     }
 
-    public bool RemoveDeluxeBurger() {
-        if (deluxeBurger > 0) {
+    public bool RemoveDeluxeBurger()
+    {
+        if (deluxeBurger > 0)
+        {
             deluxeBurger--;
+            SetTextNil();
             Debug.Log("Deluxe Burger Removed");
             return true;
-        } else {
+        }
+        else
+        {
             return false;
         }
     }
@@ -308,6 +344,7 @@ public class PlayerInventory : MonoBehaviour
         if (drinks > 0)
         {
             drinks--;
+            SetTextNil();
             Debug.Log("Drink Removed");
             return true;
         }

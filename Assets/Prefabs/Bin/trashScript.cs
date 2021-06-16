@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class trashScript : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class trashScript : MonoBehaviour
     public BoxCollider2D collider;
     public PlayerInventory inv;
     public chuteScript chute;
+    public Text text;
 
     public Sprite emptyTrash;
     public Sprite someTrash;
@@ -42,6 +44,7 @@ public class trashScript : MonoBehaviour
         {
             Debug.Log("Added " + inv.CountItems() + " items to trashbin");
             trashBinSprite.sprite = someTrash;
+            SetTextNil();
             trashCurrent += inv.CountItems();
             inv.RemoveAll();
         }
@@ -60,6 +63,10 @@ public class trashScript : MonoBehaviour
         trashCurrent = 0;
         inv.AddTrash();
         trashBinSprite.sprite = emptyTrash;
+    }
+    public void SetTextNil()
+    {
+        text.text = "";
     }
 
 }
