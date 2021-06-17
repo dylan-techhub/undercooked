@@ -51,7 +51,7 @@ public class CustomerManager : MonoBehaviour
     public void NextCustomerEnter()
     {
         // Activate the customer
-        customerIndex++;
+        
         if (customerIndex >= customers.Length) {
             customerIndex = 0;
         }
@@ -66,7 +66,7 @@ public class CustomerManager : MonoBehaviour
         scoreUI.currentCustomer = customerIndex; // For the score UI
         scoreUI.inv = order; // For the score UI
 
-
+        customerIndex++;
     }
 
     public void NextCustomerExit() {
