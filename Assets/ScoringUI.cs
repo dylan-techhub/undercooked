@@ -9,7 +9,8 @@ public class ScoringUI : MonoBehaviour
     public Text customersTotalText;
     public Text customerNumText;
     public Text avgTimeText;
-    public Text currentTimeText;
+    public Text currentTimeText_min;
+    public Text currentTimeText_seconds;
     public Text scoreText;
 
     // Customer manager
@@ -28,7 +29,8 @@ public class ScoringUI : MonoBehaviour
         // Assign to the Text UI elements
         customerNumText.text = "" + currentCustomer;
         avgTimeText.text = "" + avgTime;
-        currentTimeText.text = "" + 0;
+        currentTimeText_min.text = "" + 0;
+        currentTimeText_seconds.text = "" + 0;
         scoreText.text = "" + 0;
 
         // Set the total number of customers at the beginning of the level
@@ -40,8 +42,8 @@ public class ScoringUI : MonoBehaviour
         customerNumText.text = "" + currentCustomer;
         avgTimeText.text = "" + avgTime;
         //currentTimeText.text = "" + 0;
-        currentTimeText.text = "" + (int)inv.timeSinceOrderTaken;
-
+        currentTimeText_min.text = "" + (int)inv.timeSinceOrderTaken / 60;
+        currentTimeText_seconds.text = "" + (int)inv.timeSinceOrderTaken % 60;  
         // This is put in update because I know it will work here, but I'm not 100% sure it would work in Start()
         customersTotalText.text = "" + totalCustomers;
     }
