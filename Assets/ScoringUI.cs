@@ -47,10 +47,11 @@ public class ScoringUI : MonoBehaviour
         // This is put in update because I know it will work here, but I'm not 100% sure it would work in Start()
         customersTotalText.text = "" + totalCustomers;
     }
-
+    // is this even being used? 
     // Call every frame in Update method
     public void UpdateOrderTimer(int currentTimer){
-        currentTimeText.text = "" + currentTimer;
+        currentTimeText_min.text = "" + (int)currentTimer / 60;
+        currentTimeText_seconds.text = "" + (int)currentTimer % 60;
     }
 
     public void OrderCompleted(float timeItTook){
