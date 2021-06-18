@@ -1463,11 +1463,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scoring Panel
       objectReference: {fileID: 0}
-    - target: {fileID: 3183113704365302148, guid: db3b89824d3f85e4084af3719308bafb,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3183113704365302149, guid: db3b89824d3f85e4084af3719308bafb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2327,7 +2322,7 @@ PrefabInstance:
     - target: {fileID: 6947873116853723403, guid: 242c10479b3c6b54f89a203e1504a86e,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6947873117315386080, guid: 242c10479b3c6b54f89a203e1504a86e,
         type: 3}
@@ -3615,6 +3610,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 542284568}
     m_Modifications:
+    - target: {fileID: 1510636157, guid: b8dc4d0fa29b0aa469d92d7c03bebb3f, type: 3}
+      propertyPath: manualOffset
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 168685605976976743, guid: b8dc4d0fa29b0aa469d92d7c03bebb3f,
         type: 3}
       propertyPath: OutputAudioMixerGroup
@@ -3748,7 +3747,7 @@ MonoBehaviour:
   inv: {fileID: 501718326}
   invUI: {fileID: 1918173763}
   scoreUI: {fileID: 1857526946}
-  playerScore: 0
+  gameOver: {fileID: 0}
   leaveTime: 3
 --- !u!1001 &2050482054
 PrefabInstance:

@@ -27,7 +27,11 @@ public class CustomerManager : MonoBehaviour
 
     public ScoringUI scoreUI;
 
-    public int playerScore;
+    // Unused.
+    //public int playerScore;
+
+    // Game over screen to pop up
+    public GameObject gameOver;
 
     // Private Variables
     private int customerIndex = 0;
@@ -39,6 +43,9 @@ public class CustomerManager : MonoBehaviour
     {
         // Bring in the first customer
         NextCustomerEnter();
+
+        // Set the ScoringUI.totalCustomers to the lenght of the customers list
+        scoreUI.totalCustomers = customers.Length;
     }
 
     // how long it took, etc
@@ -51,9 +58,11 @@ public class CustomerManager : MonoBehaviour
     public void NextCustomerEnter()
     {
         // Activate the customer
-        
+        customerIndex++;
         if (customerIndex >= customers.Length) {
             customerIndex = 0;
+            // Game over!
+            endscreen();
         }
 
         customers[customerIndex].SetActive(true);
@@ -65,11 +74,16 @@ public class CustomerManager : MonoBehaviour
 
         scoreUI.currentCustomer = customerIndex; // For the score UI
         scoreUI.inv = order; // For the score UI
+        //scoreUI.
 
-        customerIndex++;
+
     }
 
     public void NextCustomerExit() {
+        // Run the addScoreToUI() in the ScoringUI gameobject.
+        scoreUI.addScoreToUI();
+        
+        // Move the customer
         movement[customerIndex].WalkOut();
         StartCoroutine(NextCustomerExitTimer(customers[customerIndex]));
 
@@ -83,5 +97,10 @@ public class CustomerManager : MonoBehaviour
         yield return new WaitForSeconds(leaveTime);
 
         cust.SetActive(false);
+    }
+
+    private void endscreen()
+    {
+        gameOver.SetActive(true);
     }
 }
