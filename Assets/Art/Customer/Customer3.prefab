@@ -69,8 +69,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -177169117
-  m_SortingLayer: 1
+  m_SortingLayerID: 738787001
+  m_SortingLayer: 2
   m_SortingOrder: 1
   m_Sprite: {fileID: -4989213301561003710, guid: 388c7b8f9e4578c48bdb7b0b6623143f,
     type: 3}
@@ -135,8 +135,6 @@ GameObject:
   - component: {fileID: 5125192567908579565}
   - component: {fileID: 94383062059134282}
   - component: {fileID: 5754983850243190226}
-  - component: {fileID: 8920410329303592270}
-  - component: {fileID: 8920410329303592265}
   m_Layer: 10
   m_Name: Customer3
   m_TagString: Customer
@@ -174,7 +172,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.71
+  m_Radius: 1
 --- !u!82 &5754983850008253678
 AudioSource:
   m_ObjectHideFlags: 0
@@ -297,10 +295,12 @@ MonoBehaviour:
   maxBurgersCanOrder: 2
   maxDeluxeBurgersCanOrder: 2
   maxDrinksCanOrder: 2
-  sfxOrderServedBellSingle: {fileID: 0}
-  sfxOrderServedBellDouble: {fileID: 0}
+  sfxOrderServedBellSingle: {fileID: 8300000, guid: e5b86f58fc83bb74abad20740cbe9793,
+    type: 3}
+  sfxOrderServedBellDouble: {fileID: 8300000, guid: 473b23605dfb0ac40b63f59e321b4a93,
+    type: 3}
   sfxOrderTakenSound: {fileID: 0}
-  playAudio: {fileID: 0}
+  playAudio: {fileID: 5754983850008253678}
   inventory: {fileID: 0}
   man: {fileID: 0}
 --- !u!114 &94383062059134282
@@ -338,73 +338,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
---- !u!212 &8920410329303592270
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4423053808824541622}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -3542622652990494284, guid: d980dd2f015fb234b8a70c553879c46e,
-    type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.64, y: 0.64}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!95 &8920410329303592265
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4423053808824541622}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5eee5da6f85f5044aa727787c8ce0071, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0

@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 59ee08571a17b54448fe4c9a8acc55de
+guid: 0fe5710058996b74ab61b836070031bc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3542622652990494284
-    second: AlienWalk2_0
+      213: 2089286154240912489
+    second: AlienWalkOrange_0
   - first:
-      213: 1075697130920182785
-    second: AlienWalk2_1
+      213: 4952194929830616356
+    second: AlienWalkOrange_1
   - first:
-      213: 3597231358499354250
-    second: AlienWalk2_2
+      213: 3427194121255422940
+    second: AlienWalkOrange_2
   - first:
-      213: 2134001220856888856
-    second: AlienWalk2_3
+      213: 8242011531308172901
+    second: AlienWalkOrange_3
   - first:
-      213: 1530992781547185277
-    second: AlienWalk2_4
+      213: 925084838174165349
+    second: AlienWalkOrange_4
   - first:
-      213: 6398378422832128935
-    second: AlienWalk2_5
+      213: -2790405682281714786
+    second: AlienWalkOrange_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AlienWalk2_0
+      name: AlienWalkOrange_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b9ef3b777316dec0800000000000000
-      internalID: -3542622652990494284
+      spriteID: 96ceba110b2aefc10800000000000000
+      internalID: 2089286154240912489
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AlienWalk2_1
+      name: AlienWalkOrange_1
       rect:
         serializedVersion: 2
         x: 64
@@ -152,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 104876e57d4adee00800000000000000
-      internalID: 1075697130920182785
+      spriteID: 42d5b030d0bb9b440800000000000000
+      internalID: 4952194929830616356
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AlienWalk2_2
+      name: AlienWalkOrange_2
       rect:
         serializedVersion: 2
         x: 128
@@ -173,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a86ff329cdeebe130800000000000000
-      internalID: 3597231358499354250
+      spriteID: cdb8cbd25e6df8f20800000000000000
+      internalID: 3427194121255422940
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AlienWalk2_3
+      name: AlienWalkOrange_3
       rect:
         serializedVersion: 2
         x: 192
@@ -194,14 +194,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81ebc6fcdce7d9d10800000000000000
-      internalID: 2134001220856888856
+      spriteID: 5660c46d1d1816270800000000000000
+      internalID: 8242011531308172901
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AlienWalk2_4
+      name: AlienWalkOrange_4
       rect:
         serializedVersion: 2
         x: 256
@@ -215,14 +215,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d74aec1c2dd2f3510800000000000000
-      internalID: 1530992781547185277
+      spriteID: 569887e42cf86dc00800000000000000
+      internalID: 925084838174165349
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AlienWalk2_5
+      name: AlienWalkOrange_5
       rect:
         serializedVersion: 2
         x: 320
@@ -236,8 +236,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a3ee67864b9bc850800000000000000
-      internalID: 6398378422832128935
+      spriteID: e9bed50f0dc7649d0800000000000000
+      internalID: -2790405682281714786
       vertices: []
       indices: 
       edges: []
