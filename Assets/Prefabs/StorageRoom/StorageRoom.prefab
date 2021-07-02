@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 6743391105567854170}
   - component: {fileID: 6743391105567854173}
   - component: {fileID: 6743391105567854168}
-  - component: {fileID: 6743391105567854171}
-  - component: {fileID: 6743391105567854169}
+  - component: {fileID: 1359122493}
+  - component: {fileID: 1359122494}
   m_Layer: 0
   m_Name: StorageRoom
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 6743391105567854172}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.103, y: 2.329, z: 0}
-  m_LocalScale: {x: 6.7367024, y: 6.411031, z: 1}
+  m_LocalScale: {x: 1.2788068, y: 0.93402714, z: 1.4449859}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -94,7 +94,7 @@ SpriteRenderer:
   m_SortingLayerID: 738787001
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 134f7b95702ccf8438b4a7bbae98495a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -105,8 +105,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &6743391105567854171
-CircleCollider2D:
+--- !u!61 &1359122493
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -118,11 +118,21 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.00045251846, y: 0.13680619}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.28, y: 1.28}
+    newSize: {x: 0.2, y: 0.2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.1
---- !u!58 &6743391105567854169
-CircleCollider2D:
+  m_Size: {x: 1.0408812, y: 1.2725075}
+  m_EdgeRadius: 0
+--- !u!61 &1359122494
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -134,6 +144,16 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0013968825, y: -0.00073395827}
+  m_Offset: {x: 0.0014672279, y: 0.12231973}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.28, y: 1.28}
+    newSize: {x: 0.2, y: 0.2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.085332565
+  m_Size: {x: 0.95424926, y: 0.8848141}
+  m_EdgeRadius: 0

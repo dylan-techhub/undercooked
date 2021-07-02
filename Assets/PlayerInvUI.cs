@@ -28,6 +28,8 @@ public class PlayerInvUI : MonoBehaviour
     public GameObject drinkIcon;
     public Text drinkCountText;
 
+    public GameObject restockBoxIcon;
+
 //    [Header("Player Feedback")]
 //    public Text messagesToPlayer;
 
@@ -47,6 +49,8 @@ public class PlayerInvUI : MonoBehaviour
         // Drinks
         drinkIcon.SetActive(inv.drinks > 0);
         drinkCountText.text = "" + inv.drinks;
+
+        restockBoxIcon.SetActive(inv.hasRestockBox);
 
     }
 }
