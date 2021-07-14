@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: d980dd2f015fb234b8a70c553879c46e
+guid: 959217cda7222004cbed1c0498432ac6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3542622652990494284
-    second: AlienWalk2_0
+      213: 277020051862053795
+    second: CustomerWalk3_0
   - first:
-      213: 1075697130920182785
-    second: AlienWalk2_1
+      213: -6912506331341798205
+    second: CustomerWalk3_1
   - first:
-      213: 3597231358499354250
-    second: AlienWalk2_2
+      213: 7864204390683940896
+    second: CustomerWalk3_2
   - first:
-      213: 2134001220856888856
-    second: AlienWalk2_3
+      213: 1356988083564872457
+    second: CustomerWalk3_3
   - first:
-      213: 1530992781547185277
-    second: AlienWalk2_4
+      213: -6478291089973608679
+    second: CustomerWalk3_4
   - first:
-      213: 6398378422832128935
-    second: AlienWalk2_5
+      213: 550569619636958231
+    second: CustomerWalk3_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -63,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -101,11 +101,23 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AlienWalk2_0
+      name: CustomerWalk3_0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b9ef3b777316dec0800000000000000
-      internalID: -3542622652990494284
+      spriteID: 3a3e5eaf44c28d300800000000000000
+      internalID: 277020051862053795
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AlienWalk2_1
+      name: CustomerWalk3_1
       rect:
         serializedVersion: 2
         x: 64
@@ -140,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 104876e57d4adee00800000000000000
-      internalID: 1075697130920182785
+      spriteID: 3c4cbbc9d18d110a0800000000000000
+      internalID: -6912506331341798205
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AlienWalk2_2
+      name: CustomerWalk3_2
       rect:
         serializedVersion: 2
         x: 128
@@ -161,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a86ff329cdeebe130800000000000000
-      internalID: 3597231358499354250
+      spriteID: 02898cb1a34432d60800000000000000
+      internalID: 7864204390683940896
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AlienWalk2_3
+      name: CustomerWalk3_3
       rect:
         serializedVersion: 2
         x: 192
@@ -182,14 +194,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81ebc6fcdce7d9d10800000000000000
-      internalID: 2134001220856888856
+      spriteID: 903825de87df4d210800000000000000
+      internalID: 1356988083564872457
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AlienWalk2_4
+      name: CustomerWalk3_4
       rect:
         serializedVersion: 2
         x: 256
@@ -203,14 +215,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d74aec1c2dd2f3510800000000000000
-      internalID: 1530992781547185277
+      spriteID: 91f7b8eb39c7816a0800000000000000
+      internalID: -6478291089973608679
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AlienWalk2_5
+      name: CustomerWalk3_5
       rect:
         serializedVersion: 2
         x: 320
@@ -224,8 +236,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a3ee67864b9bc850800000000000000
-      internalID: 6398378422832128935
+      spriteID: 714359ae62404a700800000000000000
+      internalID: 550569619636958231
       vertices: []
       indices: 
       edges: []
